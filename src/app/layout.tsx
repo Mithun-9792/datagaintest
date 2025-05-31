@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import ReduxProvider from "@/components/ReduxProvider";
+import Sidebar from "@/components/Sidebar";
+import Header from "@/components/Header";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +31,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ReduxProvider>
+          <div className="min-h-screen grid grid-rows-[auto_1fr] grid-cols-1">
+            <ToastContainer />
+            <Header />
+
+            <div className="grid grid-cols-[auto_1fr]">
+              <Sidebar />
+              <main className="p-6 overflow-auto w-full">{children}</main>
+            </div>
+          </div>
+        </ReduxProvider>
       </body>
     </html>
   );

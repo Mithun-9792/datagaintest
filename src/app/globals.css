@@ -1,9 +1,11 @@
 @import "tailwindcss";
 
+
 :root {
-  --background: #ffffff;
+  --background: #f8fafc;
   --foreground: #171717;
 }
+
 
 @theme inline {
   --color-background: var(--background);
@@ -14,8 +16,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #f8fafc;
+    --foreground: #171717;
   }
 }
 
@@ -23,4 +25,35 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.table-scroll-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  /* Hide scroll on parent, show only on table */
+  position: relative;
+}
+
+.table-scroll-wrapper table {
+  min-width: 1200px;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+/* Webkit browsers (Chrome, Edge, Safari) */
+.table-scroll::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.table-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+  background-color: #DBE1E5;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
 }

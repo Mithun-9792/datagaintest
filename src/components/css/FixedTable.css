@@ -1,0 +1,39 @@
+.table-scroll {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border: 1px solid #000;
+}
+
+.table-wrap {
+    width: 100%;
+    overflow: auto;
+}
+
+.table-scroll table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table-scroll th,
+.table-scroll td {
+    padding: 5px 10px;
+    border: 1px solid #000;
+    background: #fff;
+    white-space: nowrap;
+    vertical-align: top;
+}
+
+.table-scroll thead,
+.table-scroll tfoot {
+    background: #f9f9f9;
+}
+
+.fixed-side {
+    position: sticky;
+    left: 0;
+    background: #eee;
+    z-index: 1;
+}
