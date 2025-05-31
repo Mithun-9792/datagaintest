@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addEvent, getEvents } from "@/_redux/slices/calenderSlice";
 import { ArrowRightFromLine, Plus, Printer, Trash2 } from "lucide-react";
 import type { DateClickArg } from "@fullcalendar/interaction";
+import PageHeader from "@/components/PageHeader";
 
 interface EventData {
   id: string;
@@ -99,9 +100,11 @@ export default function Schedule() {
     "December",
   ];
   return (
-    <div className="p-4">
+    <div className="px-4">
+      <div className="mb-8">
+        <PageHeader title="Schedule" />
+      </div>
       <div className="p-4 bg-gray-100 rounded-xl shadow-md space-y-4 my-4">
-        {/* Top Row */}
         <div className="flex items-center gap-4 flex-wrap bg-gray-300 rounded-4xl p-3">
           <label className="text-lg font-bold whitespace-nowrap">
             Add new schedule(s) :

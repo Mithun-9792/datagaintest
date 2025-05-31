@@ -21,12 +21,12 @@ import { usePathname } from "next/navigation";
 
 const menuItems = [
   { name: "Dashboard", icon: LayoutDashboard, href: "/" },
-  { name: "Accounts", icon: Users, href: "/accounts" },
-  { name: "Batches", icon: Bookmark, href: "/batches" },
-  { name: "Resolution", icon: Split, href: "/resolution" },
-  { name: "Assessments", icon: NotepadText, href: "/assessments" },
+  { name: "Accounts", icon: Users, href: "/Accounts" },
+  { name: "Batches", icon: Bookmark, href: "/Batches" },
+  { name: "Resolution", icon: Split, href: "/Resolution" },
+  { name: "Assessments", icon: NotepadText, href: "/Assessments" },
   { name: "Appeal Letter", icon: Landmark, href: "/AppealLetter" },
-  { name: "Summary", icon: ListChecks, href: "/summary" },
+  { name: "Summary", icon: ListChecks, href: "/Summary" },
   { name: "Schedule", icon: Calendar, href: "/Schedule" },
 ];
 
